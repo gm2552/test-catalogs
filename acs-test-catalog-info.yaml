@@ -1,1 +1,14 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: acs-test
+ description: ACS Test TAP Application
+ tags:
+   - tanzu
+ annotations:
+   'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=acs-test'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  system: test
