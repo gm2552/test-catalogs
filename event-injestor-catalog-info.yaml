@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: event-injestor
+ description: Generic event injestor
+ tags:
+   - tanzu
+ annotations:
+   'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=event-injestor'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  system: test
