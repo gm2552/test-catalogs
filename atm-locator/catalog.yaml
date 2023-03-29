@@ -1,3 +1,4 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -7,6 +8,36 @@ metadata:
    - tanzu
  annotations:
    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=location-translator'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  system: atm-locator
+--
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: atm
+ description: ATM Service
+ tags:
+   - tanzu
+ annotations:
+   'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=atm'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  system: atm-locator
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: atm-locator
+ description: ATM Service
+ tags:
+   - tanzu
+ annotations:
+   'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=atm-locator'
 spec:
   type: service
   lifecycle: experimental
