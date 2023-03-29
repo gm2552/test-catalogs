@@ -13,7 +13,7 @@ spec:
   lifecycle: experimental
   owner: default-team
   system: atm-locator
---
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
