@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: where-for-dinner-search-proc
+ description: Where For Dinner Search Processor
+ tags:
+   - tanzu
+ annotations:
+   'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=where-for-dinner-search-proc'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  system: test
